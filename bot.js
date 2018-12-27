@@ -1,19 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.on("ready", function() {
-    var clientonmessage = `
-------------------------------------------------------
-> Logging in...
-------------------------------------------------------
-Logged in as ${client.user.tag}
-Working on ${client.guilds.size} servers!
-${client.channels.size} channels and ${client.users.size} users cached!
-I am logged in and ready to roll!
-LET'S GO!
-------------------------------------------------------
-----------Bot created by Blue Malgeran#3106-----------
-------------------------------------------------------
------------------Bot's commands logs------------------`
 
 client.on("message", message => {
             if(message.content.startsWith("*تقديم")) {
