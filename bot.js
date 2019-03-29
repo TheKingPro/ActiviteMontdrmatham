@@ -83,7 +83,7 @@ client.on("message", message => {
             if(!message.channel.guild) return;
                 if(message.author.bot) return;
                 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
-                message.guild.createChannel("التقديمات", "text").then(c =>{
+                message.guild.createChannel("〖📢〗apply", "text").then(c =>{
                     c.overwritePermissions(message.guild.id, {
                         SEND_MESSAGES: false
  
@@ -116,8 +116,8 @@ client.on('message',async message => {
   let mention = message.mentions.members.first();
   if(message.content.startsWith("*رفض")) {
   if(!message.channel.guild) return;
-  let acRoom = message.guild.channels.find('name', 'القبول-الرفض');
-  if(!acRoom) return message.reply("!!setac من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
+  let acRoom = message.guild.channels.find('name', '〖✅〗acceptance-rejection〖❌〗');
+  if(!acRoom) return message.reply("!!setac من فضلك انشاء روم **〖✅〗acceptance-rejection〖❌〗** او اكتب الامر");
   if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
   if(!mention) return message.reply("منشن شخص");
  
@@ -129,7 +129,7 @@ client.on('message',async message => {
          if(!message.channel.guild) return;
                 if(message.author.bot) return;
                 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
-                message.guild.createChannel("القبول-الرفض", "text").then(c =>{
+                message.guild.createChannel("〖✅〗acceptance-rejection〖❌〗", "text").then(c =>{
                     c.overwritePermissions(message.guild.id, {
                         SEND_MESSAGES: false
  
