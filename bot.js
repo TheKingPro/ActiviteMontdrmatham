@@ -5,7 +5,7 @@ client.on("message", message => {
             if(message.content.startsWith("*تقديم")) {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
-        let channel = message.guild.channels.find("name", "التقديمات")
+        let channel = message.guild.channels.find("name", "〖📢〗apply")
             if(!channel) return message.reply("**لانشاء روم التقديمات !!setsubmissions من فضلك اكتب الامر**")
             if(channel) {
             message.channel.send( message.member + ', **:timer:**').then( (m) =>{
